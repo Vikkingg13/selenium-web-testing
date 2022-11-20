@@ -10,12 +10,12 @@ import java.time.Duration;
 
 public class SeleniumTest {
 
-    private static final String url = "https://github.com/Vikkingg13";
+    private static final String URL = "https://github.com/Vikkingg13";
 
     @Test
     public void whenGetTitleThenReturnString() {
         WebDriver driver = new ChromeDriver();
-        driver.get(url);
+        driver.get(URL);
 
         var title = driver.getTitle();
 
@@ -27,7 +27,7 @@ public class SeleniumTest {
     @Test
     public void whenFindElementByNameThenReturnElement() {
         WebDriver driver = new ChromeDriver();
-        driver.get(url);
+        driver.get(URL);
         driver.manage().timeouts().implicitlyWait(Duration.ofMillis(500));
 
         var element = driver.findElement(By.name("button"));
@@ -42,7 +42,7 @@ public class SeleniumTest {
     @Test
     public void whenFindElementsByClassThenReturnElement() {
         WebDriver driver = new ChromeDriver();
-        driver.get(url);
+        driver.get(URL);
         driver.manage().timeouts().implicitlyWait(Duration.ofMillis(500));
 
         var element = driver.findElement(By.className("btn-block"));
@@ -57,7 +57,7 @@ public class SeleniumTest {
     @Test
     public void whenFindElementBySelectorAndClickThenNewElementShows() {
         WebDriver driver = new ChromeDriver();
-        driver.get(url);
+        driver.get(URL);
         driver.manage().timeouts().implicitlyWait(Duration.ofMillis(500));
 
         var link = driver.findElement(
@@ -75,7 +75,7 @@ public class SeleniumTest {
     @Test
     public void whenFindElementsByClassNameThenReturnList() {
         WebDriver driver = new ChromeDriver();
-        driver.get(url);
+        driver.get(URL);
         driver.manage().timeouts().implicitlyWait(Duration.ofMillis(500));
 
         var elements = driver.findElements(By.className("repo"));
